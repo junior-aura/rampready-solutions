@@ -45,10 +45,10 @@ const Header = () => {
           <div className="hidden md:flex items-center gap-4">
             <a href="tel:+1234567890" className={`flex items-center gap-2 text-sm font-medium ${isScrolled ? "text-foreground" : "text-primary-foreground"}`}>
               <Phone className="w-4 h-4" />
-              <span>1-800-RAMP-PRO</span>
+              <span>(31) 9 9691-4631</span>
             </a>
             <Button variant="cta" size="lg" asChild>
-              <a href="#contact">Request Quote</a>
+              <a href="#contact">Solicitar reserva</a>
             </Button>
           </div>
 
@@ -65,7 +65,7 @@ const Header = () => {
                   {link.label}
                 </a>)}
               <Button variant="cta" size="lg" className="mt-2" asChild>
-                <a href="#contact">Request Quote</a>
+                <a href="#contact">Solicitar reserva</a>
               </Button>
             </nav>
           </div>}
