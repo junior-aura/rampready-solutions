@@ -1,23 +1,12 @@
 import { Button } from "@/components/ui/button";
 import { Play, ArrowRight, CheckCircle } from "lucide-react";
 import heroImage from "@/assets/hero-ramp.jpg";
-
 const Hero = () => {
-  const benefits = [
-    "Deploys in under 60 seconds",
-    "5,000+ lbs load capacity",
-    "Compact storage footprint",
-  ];
-
-  return (
-    <section className="relative min-h-screen flex items-center gradient-hero overflow-hidden">
+  const benefits = ["Deploys in under 60 seconds", "5,000+ lbs load capacity", "Compact storage footprint"];
+  return <section className="relative min-h-screen flex items-center gradient-hero overflow-hidden">
       {/* Background Image with Overlay */}
       <div className="absolute inset-0">
-        <img
-          src={heroImage}
-          alt="Industrial foldable ramp in warehouse"
-          className="w-full h-full object-cover opacity-30"
-        />
+        <img src={heroImage} alt="Industrial foldable ramp in warehouse" className="w-full h-full object-cover opacity-30" />
         <div className="absolute inset-0 bg-gradient-to-r from-primary/95 via-primary/80 to-primary/60" />
       </div>
 
@@ -31,14 +20,12 @@ const Hero = () => {
           <div className="text-primary-foreground">
             <div className="inline-flex items-center gap-2 px-4 py-2 bg-accent/20 rounded-full mb-6 animate-fade-up">
               <span className="w-2 h-2 bg-accent rounded-full animate-pulse" />
-              <span className="text-sm font-medium text-primary-foreground/90">
-                Industry-Leading Innovation
-              </span>
+              <span className="text-sm font-medium text-primary-foreground/90">Prêmio "Inovação 25" categoria Logística</span>
             </div>
 
             <h1 className="font-display text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight mb-6 animate-fade-up delay-100">
               Heavy-Duty Power.{" "}
-              <span className="text-gradient">Compact Storage.</span>
+              <span className="text-gradient">Espaço compacto.</span>
             </h1>
 
             <p className="text-lg sm:text-xl text-primary-foreground/80 mb-8 max-w-xl animate-fade-up delay-200">
@@ -48,12 +35,10 @@ const Hero = () => {
 
             {/* Benefits List */}
             <ul className="space-y-3 mb-8 animate-fade-up delay-300">
-              {benefits.map((benefit, index) => (
-                <li key={index} className="flex items-center gap-3">
+              {benefits.map((benefit, index) => <li key={index} className="flex items-center gap-3">
                   <CheckCircle className="w-5 h-5 text-accent flex-shrink-0" />
                   <span className="text-primary-foreground/90">{benefit}</span>
-                </li>
-              ))}
+                </li>)}
             </ul>
 
             {/* CTA Buttons */}
@@ -87,11 +72,7 @@ const Hero = () => {
           {/* Hero Visual / Video Placeholder */}
           <div className="relative hidden lg:block animate-fade-up delay-300">
             <div className="relative aspect-video rounded-2xl overflow-hidden shadow-2xl shadow-black/30">
-              <img
-                src={heroImage}
-                alt="Foldable ramp demonstration"
-                className="w-full h-full object-cover"
-              />
+              <img src={heroImage} alt="Foldable ramp demonstration" className="w-full h-full object-cover" />
               {/* Play Button Overlay */}
               <div className="absolute inset-0 flex items-center justify-center bg-black/30 hover:bg-black/20 transition-colors cursor-pointer group">
                 <div className="w-20 h-20 bg-accent rounded-full flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform">
@@ -121,8 +102,6 @@ const Hero = () => {
           <div className="w-1.5 h-3 bg-primary-foreground/50 rounded-full" />
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default Hero;
