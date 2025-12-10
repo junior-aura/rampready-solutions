@@ -13,16 +13,16 @@ const Header = () => {
   }, []);
   const navLinks = [{
     href: "#features",
-    label: "Features"
+    label: "Como funciona?"
   }, {
     href: "#specs",
-    label: "Specifications"
+    label: "Especificações"
   }, {
     href: "#applications",
-    label: "Applications"
+    label: "Aplicações"
   }, {
     href: "#testimonials",
-    label: "Testimonials"
+    label: "Avaliações"
   }];
   return <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? "bg-card/95 backdrop-blur-md shadow-lg" : "bg-transparent"}`}>
       <div className="container-max section-padding !py-4">
