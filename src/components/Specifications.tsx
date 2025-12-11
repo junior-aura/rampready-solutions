@@ -10,39 +10,39 @@ import { Button } from "@/components/ui/button";
 const Specifications = () => {
   const specs = [
     {
-      category: "Dimensions",
+      category: "Dimensões",
       items: [
-        { label: "Extended Length", value: "12 ft (3.66 m)" },
-        { label: "Folded Length", value: "2.4 ft (0.73 m)" },
-        { label: "Width", value: "36 in (91 cm)" },
-        { label: "Folded Height", value: "24 in (61 cm)" },
+        { label: "Comprimento (extendida)", value: "500 cm (5 metros)" },
+        { label: "Comprimento (dobrada)", value: "2.4 ft (0.73 m)" },
+        { label: "Largura", value: "100 cm" },
+        { label: "Altura (dobrada)", value: "61 cm" },
       ],
     },
     {
       category: "Performance",
       items: [
-        { label: "Max Load Capacity", value: "5,000 lbs (2,268 kg)" },
-        { label: "Deployment Time", value: "< 60 seconds" },
-        { label: "Height Range", value: "36 - 54 in (91 - 137 cm)" },
-        { label: "Incline Angle", value: "15° - 25° adjustable" },
+        { label: "Capacidade de carga", value: "5,000 lbs (2,268 kg)" },
+        { label: "Tempo de posicionamento", value: "< 180 segundos" },
+        { label: "Altura de aplicação", value: "36 - 54 in (91 - 137 cm)" },
+        { label: "Ângulo de inclinação", value: "15° - 25° adjustable" },
       ],
     },
     {
-      category: "Construction",
+      category: "Construção",
       items: [
-        { label: "Frame Material", value: "6061-T6 Aircraft Aluminum" },
-        { label: "Surface Material", value: "Anti-slip Diamond Plate" },
-        { label: "Roller Type", value: "Heavy-duty Steel Bearings" },
-        { label: "Weight", value: "185 lbs (84 kg)" },
+        { label: "Material da Estrutura", value: "Alumínio Aeronáutico 6061-T6" },
+        { label: "Material da Superfície", value: "Chapa Xadrez Antiderrapante" },
+        { label: "Tipo de Roletes", value: "Rolamentos de Aço Reforçados" },
+        { label: "Peso", value: "185 lbs (84 kg)" },
       ],
     },
     {
       category: "Safety & Compliance",
       items: [
-        { label: "Safety Factor", value: "3:1 minimum" },
-        { label: "OSHA Compliant", value: "Yes" },
-        { label: "Weather Rating", value: "IP65 (Outdoor Use)" },
-        { label: "Warranty", value: "10 Years Limited" },
+        { label: "Fator de Segurança", value: "3:1 mínimo" },
+        { label: "Em Conformidade com OSHA", value: "Sim" },
+        { label: "Classificação de Intempéries", value: "IP65 (Uso Externo)" },
+        { label: "Garantia", value: "2 Anos Limitada" },
       ],
     },
   ];
@@ -54,32 +54,32 @@ const Specifications = () => {
           {/* Left Column - Header & CTA */}
           <div className="text-primary-foreground lg:sticky lg:top-32">
             <span className="inline-block px-4 py-1 bg-accent/20 text-accent rounded-full text-sm font-semibold mb-4">
-              Technical Data
+              Dados técnicos
             </span>
             <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl font-bold mb-6">
-              Built to <span className="text-gradient">Perform</span>
+              Construída para o <span className="text-gradient">Desempenho</span>
             </h2>
             <p className="text-lg text-primary-foreground/80 mb-8">
-              Every specification is engineered for maximum durability, safety, and ease of use. 
-              Our ramps exceed industry standards across the board.
+              Cada especificação é projetada para máxima durabilidade, segurança e facilidade de uso.
+              Nossas rampas excedem os padrões da indústria em todos os aspectos.
             </p>
 
             {/* Quick Stats */}
             <div className="grid grid-cols-2 gap-4 mb-8">
               <div className="bg-primary-foreground/10 p-4 rounded-xl backdrop-blur-sm">
-                <div className="text-3xl font-display font-bold text-accent">10yr</div>
-                <div className="text-sm text-primary-foreground/70">Warranty</div>
+                <div className="text-3xl font-display font-bold text-accent">730 dias</div>
+                <div className="text-sm text-primary-foreground/70">Garantia</div>
               </div>
               <div className="bg-primary-foreground/10 p-4 rounded-xl backdrop-blur-sm">
                 <div className="text-3xl font-display font-bold text-accent">3:1</div>
-                <div className="text-sm text-primary-foreground/70">Safety Factor</div>
+                <div className="text-sm text-primary-foreground/70">Fator de Segurança</div>
               </div>
             </div>
 
             {/* Download Button */}
             <Button variant="hero-outline" size="lg" className="gap-2">
               <Download className="w-5 h-5" />
-              Download Full Spec Sheet
+              Baixar ficha técnica completa
               <FileText className="w-4 h-4" />
             </Button>
           </div>

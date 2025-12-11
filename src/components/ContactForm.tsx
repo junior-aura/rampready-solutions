@@ -31,8 +31,8 @@ const ContactForm = () => {
     await new Promise((resolve) => setTimeout(resolve, 1500));
 
     toast({
-      title: "Quote Request Submitted!",
-      description: "Our team will contact you within 24 hours.",
+      title: "Solicitação de Orçamento Enviada!",
+      description: "Nossa equipe entrará em contato com você dentro de 24 horas.",
     });
 
     setFormData({
@@ -52,14 +52,14 @@ const ContactForm = () => {
           {/* Left Column - Info */}
           <div>
             <span className="inline-block px-4 py-1 bg-accent/10 text-accent rounded-full text-sm font-semibold mb-4">
-              Get In Touch
+              Entre em Contato
             </span>
             <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground mb-6">
-              Ready to <span className="text-gradient">Transform</span> Your Operations?
+              Pronto para <span className="text-gradient">dobrar</span> sua eficiência?
             </h2>
             <p className="text-lg text-muted-foreground mb-8">
-              Get a customized quote for your specific needs. Our team of material handling 
-              experts will help you find the perfect solution.
+              Receba uma proposta personalizada para sua operação. O time de materiais da
+              Auratec tem +18 anos de experiência.
             </p>
 
             {/* Contact Info */}
@@ -69,9 +69,9 @@ const ContactForm = () => {
                   <Phone className="w-5 h-5 text-accent" />
                 </div>
                 <div>
-                  <div className="font-semibold text-foreground">Call Us</div>
-                  <a href="tel:+18007267776" className="text-muted-foreground hover:text-accent transition-colors">
-                    1-800-RAMP-PRO (726-7776)
+                  <div className="font-semibold text-foreground">Ligue pra gente</div>
+                  <a href="tel:+5531996544631" className="text-muted-foreground hover:text-accent transition-colors">
+                    (31) 9 9654-4631
                   </a>
                 </div>
               </div>
@@ -81,9 +81,9 @@ const ContactForm = () => {
                   <Mail className="w-5 h-5 text-accent" />
                 </div>
                 <div>
-                  <div className="font-semibold text-foreground">Email Us</div>
-                  <a href="mailto:sales@ramppro.com" className="text-muted-foreground hover:text-accent transition-colors">
-                    sales@ramppro.com
+                  <div className="font-semibold text-foreground">Email</div>
+                  <a href="mailto:ecommerce@auratec.com.br" className="text-muted-foreground hover:text-accent transition-colors">
+                    ecommerce@auratec.com.br
                   </a>
                 </div>
               </div>
@@ -93,10 +93,10 @@ const ContactForm = () => {
                   <MapPin className="w-5 h-5 text-accent" />
                 </div>
                 <div>
-                  <div className="font-semibold text-foreground">Visit Us</div>
+                  <div className="font-semibold text-foreground">Visite-nos</div>
                   <p className="text-muted-foreground">
-                    1234 Industrial Parkway<br />
-                    Chicago, IL 60601
+                    Rua Tratoy, 167 - Jardim Piemont Norte,<br />
+                    Betim - MG, 32.689-338
                   </p>
                 </div>
               </div>
@@ -106,7 +106,7 @@ const ContactForm = () => {
             <div className="inline-flex items-center gap-2 px-4 py-2 bg-card rounded-lg shadow-sm">
               <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse" />
               <span className="text-sm text-muted-foreground">
-                Average response time: <span className="font-semibold text-foreground">Under 4 hours</span>
+                Tempo de retorno médio: <span className="font-semibold text-foreground">Abaixo de 4 horas</span>
               </span>
             </div>
           </div>
@@ -114,14 +114,14 @@ const ContactForm = () => {
           {/* Right Column - Form */}
           <div className="bg-card p-8 rounded-2xl shadow-xl">
             <h3 className="font-display text-2xl font-bold text-foreground mb-6">
-              Request a Quote
+              Fale com um consultor técnico
             </h3>
 
             <form onSubmit={handleSubmit} className="space-y-5">
               <div className="grid sm:grid-cols-2 gap-4">
                 <div>
                   <label htmlFor="name" className="block text-sm font-medium text-foreground mb-2">
-                    Full Name *
+                    Nome Completo *
                   </label>
                   <Input
                     id="name"
@@ -136,13 +136,12 @@ const ContactForm = () => {
                 </div>
                 <div>
                   <label htmlFor="company" className="block text-sm font-medium text-foreground mb-2">
-                    Company Name *
+                    Empresa
                   </label>
                   <Input
                     id="company"
                     name="company"
                     type="text"
-                    required
                     value={formData.company}
                     onChange={handleChange}
                     placeholder="Acme Logistics"
@@ -154,7 +153,7 @@ const ContactForm = () => {
               <div className="grid sm:grid-cols-2 gap-4">
                 <div>
                   <label htmlFor="email" className="block text-sm font-medium text-foreground mb-2">
-                    Email Address *
+                    E-mail *
                   </label>
                   <Input
                     id="email"
@@ -163,13 +162,13 @@ const ContactForm = () => {
                     required
                     value={formData.email}
                     onChange={handleChange}
-                    placeholder="john@company.com"
+                    placeholder="john@empresa.com.br"
                     className="h-12"
                   />
                 </div>
                 <div>
                   <label htmlFor="phone" className="block text-sm font-medium text-foreground mb-2">
-                    Phone Number
+                    Celular
                   </label>
                   <Input
                     id="phone"
@@ -177,7 +176,7 @@ const ContactForm = () => {
                     type="tel"
                     value={formData.phone}
                     onChange={handleChange}
-                    placeholder="(555) 123-4567"
+                    placeholder="(11) 9 1234-5678"
                     className="h-12"
                   />
                 </div>
@@ -185,14 +184,14 @@ const ContactForm = () => {
 
               <div>
                 <label htmlFor="message" className="block text-sm font-medium text-foreground mb-2">
-                  Tell Us About Your Needs
+                  Como a Rampa Dobrável pode ajudar sua operação?
                 </label>
                 <Textarea
                   id="message"
                   name="message"
                   value={formData.message}
                   onChange={handleChange}
-                  placeholder="Describe your loading/unloading requirements, quantity needed, timeline, etc."
+                  placeholder="Descreva seus requisitos de carga/descarga, o ambiente onde você usará, prazos, etc."
                   className="min-h-[120px] resize-none"
                 />
               </div>
@@ -201,18 +200,18 @@ const ContactForm = () => {
                 {isSubmitting ? (
                   <span className="flex items-center gap-2">
                     <div className="w-5 h-5 border-2 border-accent-foreground/30 border-t-accent-foreground rounded-full animate-spin" />
-                    Submitting...
+                    Enviando...
                   </span>
                 ) : (
                   <span className="flex items-center gap-2">
-                    Submit Quote Request
+                    Solicitar uma demonstração 
                     <Send className="w-5 h-5" />
                   </span>
                 )}
               </Button>
 
               <p className="text-xs text-muted-foreground text-center">
-                By submitting this form, you agree to our Privacy Policy and Terms of Service.
+                Não enviamos nenhum tipo de SPAM. É um compromisso :D
               </p>
             </form>
           </div>

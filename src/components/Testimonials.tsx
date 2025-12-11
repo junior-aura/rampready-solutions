@@ -38,13 +38,13 @@ const Testimonials = () => {
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
           <span className="inline-block px-4 py-1 bg-accent/10 text-accent rounded-full text-sm font-semibold mb-4">
-            Customer Stories
+            Quem testou tá falando
           </span>
           <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground mb-6">
-            Trusted by <span className="text-gradient">Industry Leaders</span>
+            Comprovado por <span className="text-gradient">Grandes Usuários</span>
           </h2>
           <p className="text-lg text-muted-foreground">
-            See why operations managers across the country choose RampPro for their material handling needs.
+            Leia depoimentos reais de gerentes de operações e logística que fizeram a mudança para a Rampa Auratec.
           </p>
         </div>
 
@@ -87,10 +87,10 @@ const Testimonials = () => {
         <div className="bg-muted rounded-2xl p-8 md:p-12">
           <div className="text-center mb-8">
             <h3 className="font-display text-xl font-bold text-foreground mb-2">
-              Industry Certifications
+              Certificações da Indústria
             </h3>
             <p className="text-muted-foreground">
-              Meeting and exceeding global safety and quality standards
+              Atendendo e excedendo os padrões globais de segurança e qualidade
             </p>
           </div>
 

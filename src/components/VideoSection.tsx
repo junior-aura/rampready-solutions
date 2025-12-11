@@ -8,14 +8,14 @@ const VideoSection = () => {
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-12">
           <span className="inline-block px-4 py-1 bg-accent/10 text-accent rounded-full text-sm font-semibold mb-4">
-            See It In Action
+            Hora da ação!
           </span>
           <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground mb-6">
-            Watch the <span className="text-gradient">RampPro</span> in Action
+            Veja a <span className="text-gradient">Rampa Auratec</span> em campo
           </h2>
           <p className="text-lg text-muted-foreground">
-            See how quickly the RampPro transforms from compact storage to full operation. 
-            Real-world demonstrations from actual warehouse environments.
+            A rapidez com que a Rampa Ajustável se transforma de compacta à operação total.
+            Demonstrações reais em ambientes de armazém.
           </p>
         </div>
 
@@ -40,9 +40,9 @@ const VideoSection = () => {
         {/* Additional Video Thumbnails */}
         <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
           {[
-            { title: "Quick Deployment Guide", duration: "1:45" },
-            { title: "Load Capacity Test", duration: "3:12" },
-            { title: "Customer Testimonial", duration: "2:08" },
+            { title: "Guia de Aplicação Rápido", duration: "1:45" },
+            { title: "Teste de Carga", duration: "3:12" },
+            { title: "Testemunho do Gerente", duration: "2:08" },
           ].map((video, index) => (
             <div
               key={index}

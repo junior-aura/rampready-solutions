@@ -3,28 +3,28 @@ import { Facebook, Twitter, Linkedin, Youtube } from "lucide-react";
 const Footer = () => {
   const footerLinks = {
     products: [
-      { label: "RampPro Standard", href: "#" },
-      { label: "RampPro Heavy Duty", href: "#" },
-      { label: "RampPro Compact", href: "#" },
-      { label: "Accessories", href: "#" },
+      { label: "Rampa Ajustável", href: "#" },
+      { label: "Praticáveis", href: "#" },
+      { label: "Boxtruss", href: "#" },
+      { label: "Acessórios", href: "#" },
     ],
     company: [
-      { label: "About Us", href: "#" },
-      { label: "Careers", href: "#" },
-      { label: "Press", href: "#" },
-      { label: "Contact", href: "#contact" },
+      { label: "Sobre Nós", href: "#" },
+      { label: "Carreiras", href: "#" },
+      { label: "Imprensa", href: "#" },
+      { label: "Contato", href: "#contact" },
     ],
     resources: [
-      { label: "Documentation", href: "#" },
-      { label: "Installation Guides", href: "#" },
-      { label: "Safety Guidelines", href: "#" },
+      { label: "Documentação", href: "#" },
+      { label: "Guias de Instalação", href: "#" },
+      { label: "Diretrizes de Segurança", href: "#" },
       { label: "FAQs", href: "#" },
     ],
     support: [
-      { label: "Technical Support", href: "#" },
-      { label: "Warranty Information", href: "#" },
-      { label: "Parts & Repairs", href: "#" },
-      { label: "Training", href: "#" },
+      { label: "Suporte Técnico", href: "#" },
+      { label: "Informações de Garantia", href: "#" },
+      { label: "Peças e Reparos", href: "#" },
+      { label: "Treinamento", href: "#" },
     ],
   };
 
@@ -44,13 +44,12 @@ const Footer = () => {
           <div className="lg:col-span-2">
             <div className="flex items-center gap-2 mb-4">
               <div className="w-10 h-10 bg-accent rounded-lg flex items-center justify-center">
-                <span className="text-accent-foreground font-display font-bold text-xl">R</span>
+                <span className="text-accent-foreground font-display font-bold text-xl">A</span>
               </div>
-              <span className="font-display font-bold text-xl">RampPro</span>
+              <span className="font-display font-bold text-xl">Auratec</span>
             </div>
             <p className="text-primary-foreground/70 mb-6 max-w-sm">
-              Industry-leading foldable loading ramps engineered for efficiency, 
-              durability, and safety. Transforming material handling since 2010.
+              Revolucionando o mercado de estruturas metálicas para eventos desde 2007. +18 anos de mercado e 30.000 clientes em todo o Brasil.
             </p>
             {/* Social Links */}
             <div className="flex gap-4">
@@ -142,17 +141,17 @@ const Footer = () => {
         <div className="container-max px-4 sm:px-6 lg:px-8 py-6">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <p className="text-sm text-primary-foreground/60">
-              © 2024 RampPro Industrial Solutions. All rights reserved.
+              © 2025 Auratec Industrial LTDA. Todos os direitos reservados.
             </p>
             <div className="flex gap-6">
               <a href="#" className="text-sm text-primary-foreground/60 hover:text-primary-foreground transition-colors">
-                Privacy Policy
+                Privacidade
               </a>
               <a href="#" className="text-sm text-primary-foreground/60 hover:text-primary-foreground transition-colors">
-                Terms of Service
+                Termos de Serviço
               </a>
               <a href="#" className="text-sm text-primary-foreground/60 hover:text-primary-foreground transition-colors">
-                Cookie Policy
+                Políticas de Dados
               </a>
             </div>
           </div>

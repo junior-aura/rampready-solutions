@@ -15,10 +15,10 @@ const Header = () => {
   }, []);
 
   const navLinks = [
-    { href: "#features", label: "Features" },
-    { href: "#specs", label: "Specifications" },
-    { href: "#applications", label: "Applications" },
-    { href: "#testimonials", label: "Testimonials" },
+    { href: "#features", label: "Recursos" },
+    { href: "#specs", label: "Especificações" },
+    { href: "#applications", label: "Aplicações" },
+    { href: "#testimonials", label: "Depoimentos" },
   ];
 
   return (
@@ -34,10 +34,10 @@ const Header = () => {
           {/* Logo */}
           <a href="#" className="flex items-center gap-2">
             <div className="w-10 h-10 bg-accent rounded-lg flex items-center justify-center">
-              <span className="text-accent-foreground font-display font-bold text-xl">R</span>
+              <span className="text-accent-foreground font-display font-bold text-xl">A</span>
             </div>
             <span className={`font-display font-bold text-xl ${isScrolled ? "text-foreground" : "text-primary-foreground"}`}>
-              RampPro
+              Auratec
             </span>
           </a>
 

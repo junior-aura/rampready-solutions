@@ -4,9 +4,9 @@ import heroImage from "@/assets/hero-ramp.jpg";
 
 const Hero = () => {
   const benefits = [
-    "Deploys in under 60 seconds",
-    "5,000+ lbs load capacity",
-    "Compact storage footprint",
+    "Implanta em menos de 60 segundos", 
+    "Capacidade de carga de 2.268 kg (5.000+ lbs)", 
+    "Pegada de armazenamento compacta",
   ];
 
   return (
@@ -32,18 +32,19 @@ const Hero = () => {
             <div className="inline-flex items-center gap-2 px-4 py-2 bg-accent/20 rounded-full mb-6 animate-fade-up">
               <span className="w-2 h-2 bg-accent rounded-full animate-pulse" />
               <span className="text-sm font-medium text-primary-foreground/90">
-                Industry-Leading Innovation
+                "Inovação 25" categoria Logística
               </span>
             </div>
 
             <h1 className="font-display text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight mb-6 animate-fade-up delay-100">
-              Heavy-Duty Power.{" "}
-              <span className="text-gradient">Compact Storage.</span>
+              Descarregue onde quiser.{" "} 
+              <span className="text-gradient">Dobre e guarde depois.</span>
             </h1>
 
             <p className="text-lg sm:text-xl text-primary-foreground/80 mb-8 max-w-xl animate-fade-up delay-200">
-              The revolutionary foldable aluminum ramp that transforms your loading operations. 
-              Deploy in seconds, store in inches, handle tons with ease.
+              Economize espaço e tempo com a RampPro. Nossa rampa industrial se dobra
+              em um piscar de olhos, oferecendo durabilidade e capacidade de carga
+              superior sem o volume das rampas tradicionais.
             </p>
 
             {/* Benefits List */}
@@ -60,26 +61,26 @@ const Hero = () => {
             <div className="flex flex-col sm:flex-row gap-4 animate-fade-up delay-400">
               <Button variant="hero" size="xl" asChild>
                 <a href="#contact">
-                  Request a Quote
+                  Solicitar melhor orçamento
                   <ArrowRight className="w-5 h-5 ml-2" />
                 </a>
               </Button>
               <Button variant="hero-outline" size="xl" asChild>
                 <a href="#video">
                   <Play className="w-5 h-5 mr-2" />
-                  Watch Demo
+                  Veja a demonstração
                 </a>
               </Button>
             </div>
 
             {/* Trust Badges */}
             <div className="mt-12 pt-8 border-t border-primary-foreground/20 animate-fade-up delay-500">
-              <p className="text-sm text-primary-foreground/60 mb-4">Trusted by industry leaders</p>
+              <p className="text-sm text-primary-foreground/60 mb-4">Recomendado por líderes da indústria</p>
               <div className="flex flex-wrap gap-8 items-center opacity-70">
-                <span className="font-display font-semibold text-lg">Amazon</span>
-                <span className="font-display font-semibold text-lg">FedEx</span>
-                <span className="font-display font-semibold text-lg">UPS</span>
-                <span className="font-display font-semibold text-lg">DHL</span>
+                <span className="font-display font-semibold text-lg">Mercado Livre</span>
+                <span className="font-display font-semibold text-lg">oList</span>
+                <span className="font-display font-semibold text-lg">AliBaba</span>
+                <span className="font-display font-semibold text-lg">Shoppe</span>
               </div>
             </div>
           </div>
@@ -102,14 +103,14 @@ const Hero = () => {
 
             {/* Floating Stats Card */}
             <div className="absolute -bottom-6 -left-6 bg-card p-6 rounded-xl shadow-xl animate-float">
-              <div className="text-3xl font-display font-bold text-foreground">5,000+</div>
-              <div className="text-sm text-muted-foreground">lbs capacity</div>
+              <div className="text-3xl font-display font-bold text-foreground">1.000+</div>
+              <div className="text-sm text-muted-foreground">kg capacidade</div>
             </div>
 
             {/* Floating Feature Card */}
             <div className="absolute -top-4 -right-4 bg-accent p-4 rounded-xl shadow-xl animate-float delay-200">
-              <div className="text-2xl font-display font-bold text-accent-foreground">60s</div>
-              <div className="text-sm text-accent-foreground/80">deployment</div>
+              <div className="text-2xl font-display font-bold text-accent-foreground">180s</div>
+              <div className="text-sm text-accent-foreground/80">Tempo de posicionamento</div>
             </div>
           </div>
         </div>
