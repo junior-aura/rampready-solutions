@@ -5,26 +5,26 @@ const Applications = () => {
   const applications = [
     {
       icon: Warehouse,
-      title: "Warehouse Loading Docks",
-      description: "Seamlessly bridge the gap between dock and truck. Perfect for high-volume facilities with varying truck heights.",
+      title: "Docas de Carregamento em Armazéns",
+      description: "Conecte perfeitamente a doca ao caminhão. Perfeito para instalações de alto volume com alturas de caminhão variadas.",
       image: heroImage,
     },
     {
       icon: Truck,
-      title: "Truck Loading/Unloading",
-      description: "Mobile solution for any delivery point. Ideal for routes with multiple stops and varying dock configurations.",
+      title: "Carga/Descarga de Caminhões",
+      description: "Solução móvel para qualquer ponto de entrega. Ideal para rotas com múltiplas paradas e diferentes configurações de doca.",
       image: heroImage,
     },
     {
       icon: Package,
-      title: "Container Operations",
-      description: "Access shipping containers with ease. Adjustable height accommodates standard 20ft and 40ft containers.",
+      title: "Operações com Contêineres",
+      description: "Acesse contêineres de transporte com facilidade. Altura ajustável acomoda contêineres padrão de 20 e 40 pés.",
       image: heroImage,
     },
     {
       icon: Building2,
-      title: "Distribution Centers",
-      description: "Handle high throughput demands. Multiple ramps can be deployed to increase loading bay capacity.",
+      title: "Centros de Distribuição",
+      description: "Lide com altas demandas de rendimento. Múltiplas rampas podem ser instaladas para aumentar a capacidade da baia de carregamento.",
       image: heroImage,
     },
   ];
@@ -35,13 +35,13 @@ const Applications = () => {
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
           <span className="inline-block px-4 py-1 bg-accent/10 text-accent rounded-full text-sm font-semibold mb-4">
-            Use Cases
+            Casos de Uso
           </span>
           <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground mb-6">
-            Built for <span className="text-gradient">Your Industry</span>
+            Construída para a <span className="text-gradient">Sua Indústria</span>
           </h2>
           <p className="text-lg text-muted-foreground">
-            From small warehouses to major distribution centers, the RampPro adapts to your specific operational needs.
+            De pequenos armazéns a grandes centros de distribuição, a RampPro se adapta às suas necessidades operacionais específicas.
           </p>
         </div>
 
@@ -84,10 +84,10 @@ const Applications = () => {
         <div className="mt-16 bg-primary rounded-2xl p-8 md:p-12">
           <div className="grid md:grid-cols-4 gap-8 text-center">
             {[
-              { value: "500+", label: "Companies Served" },
-              { value: "10,000+", label: "Units Deployed" },
-              { value: "15+", label: "Countries" },
-              { value: "99.8%", label: "Uptime Rate" },
+              { value: "500+", label: "Empresas atendidas" },
+              { value: "100.000+", label: "Metros de Estrutura" },
+              { value: "130+", label: "Avaliações" },
+              { value: "99.8%", label: "Índice de Satisfação" },
             ].map((stat, index) => (
               <div key={index}>
                 <div className="text-4xl font-display font-bold text-accent mb-2">

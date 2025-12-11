@@ -15,13 +15,13 @@ const ComparisonSlider = () => {
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-12">
           <span className="inline-block px-4 py-1 bg-accent/10 text-accent rounded-full text-sm font-semibold mb-4">
-            Space Efficiency
+            Eficiência de Espaço
           </span>
           <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground mb-6">
-            Folded vs. <span className="text-gradient">Deployed</span>
+            Queixo-duro vs. <span className="text-gradient">Ajustável</span>
           </h2>
           <p className="text-lg text-muted-foreground">
-            Drag the slider to see the dramatic difference between storage and operational states.
+            Arraste o controle deslizante para ver a diferença drástica entre os estados de armazenamento e operacional.
           </p>
         </div>
 
@@ -63,10 +63,10 @@ const ComparisonSlider = () => {
 
             {/* Labels */}
             <div className="absolute top-4 left-4 px-3 py-1.5 bg-primary/90 rounded-lg">
-              <span className="text-primary-foreground font-semibold text-sm">Folded</span>
+              <span className="text-primary-foreground font-semibold text-sm">Concorrente</span>
             </div>
             <div className="absolute top-4 right-4 px-3 py-1.5 bg-accent/90 rounded-lg">
-              <span className="text-accent-foreground font-semibold text-sm">Deployed</span>
+              <span className="text-accent-foreground font-semibold text-sm">Auratec</span>
             </div>
 
             {/* Invisible Range Input for Interaction */}
@@ -86,11 +86,11 @@ const ComparisonSlider = () => {
         <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto mt-12">
           <div className="bg-card p-6 rounded-xl shadow-card border border-border/50 text-center">
             <div className="text-4xl font-display font-bold text-foreground mb-2">80%</div>
-            <p className="text-muted-foreground">Storage Space Reduction</p>
+            <p className="text-muted-foreground">Economia em Espaço</p>
           </div>
           <div className="bg-card p-6 rounded-xl shadow-card border border-border/50 text-center">
-            <div className="text-4xl font-display font-bold text-accent mb-2">12 ft</div>
-            <p className="text-muted-foreground">Full Extended Length</p>
+            <div className="text-4xl font-display font-bold text-accent mb-2">5 metros</div>
+            <p className="text-muted-foreground">Comprimento extendido total</p>
           </div>
         </div>
       </div>
