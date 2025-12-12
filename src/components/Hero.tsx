@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Play, ArrowRight, CheckCircle } from "lucide-react";
-import heroImage from "@/assets/hero-ramp.jpg";
+import heroImage from "@/assets/Rampa-hero.png";
 
 const Hero = () => {
   const benefits = [
@@ -80,7 +80,7 @@ const Hero = () => {
                 <span className="font-display font-semibold text-lg">Mercado Livre</span>
                 <span className="font-display font-semibold text-lg">oList</span>
                 <span className="font-display font-semibold text-lg">AliBaba</span>
-                <span className="font-display font-semibold text-lg">Shoppe</span>
+                <span className="font-display font-semibold text-lg">Shopee</span>
               </div>
             </div>
           </div>

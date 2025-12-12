@@ -1,9 +1,12 @@
 import { useState } from "react";
+import axios from "axios";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/hooks/use-toast";
 import { Send, Phone, Mail, MapPin } from "lucide-react";
+
+const MAUTIC_FORM_URL = "https://mautic.vaiprojunior.site/form/submit?formId=2";
 
 const ContactForm = () => {
   const { toast } = useToast();
@@ -27,22 +30,41 @@ const ContactForm = () => {
     e.preventDefault();
     setIsSubmitting(true);
 
-    // Simulate form submission
-    await new Promise((resolve) => setTimeout(resolve, 1500));
+    const mauticData = new FormData();
+    
+    mauticData.append("mauticform[name]", formData.name);
+    mauticData.append("mauticform[company]", formData.company); 
+    mauticData.append("mauticform[email]", formData.email);
+    mauticData.append("mauticform[phone]", formData.phone);
+    mauticData.append("mauticform[message]", formData.message);
+    mauticData.append("mauticform[submit]", "1"); 
+    
+    try {
+      const response = await axios.post(MAUTIC_FORM_URL, mauticData); 
 
-    toast({
-      title: "Solicitação de Orçamento Enviada!",
-      description: "Nossa equipe entrará em contato com você dentro de 24 horas.",
-    });
+      toast({
+        title: "Solicitação de Orçamento Enviada!",
+        description: "Sua mensagem foi enviada ao Mautic. Nossa equipe entrará em contato com você dentro de 24 horas.",
+      });
 
-    setFormData({
-      name: "",
-      company: "",
-      email: "",
-      phone: "",
-      message: "",
-    });
-    setIsSubmitting(false);
+      setFormData({
+        name: "",
+        company: "",
+        email: "",
+        phone: "",
+        message: "",
+      });
+
+    } catch (error) {
+      console.error("Erro ao enviar para o Mautic:", error);
+      toast({
+          title: "Erro no Envio!",
+          description: "Não foi possível enviar sua solicitação. Por favor, tente novamente mais tarde.",
+          variant: "destructive" 
+      });
+    } finally {
+      setIsSubmitting(false); 
+    }
   };
 
   return (

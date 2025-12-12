@@ -1,9 +1,9 @@
 import { useState } from "react";
-import rampFolded from "@/assets/ramp-folded.jpg";
-import rampDeployed from "@/assets/ramp-deployed.jpg";
+import rampFolded from "@/assets/ramp-folded.png";
+import rampDeployed from "@/assets/ramp-deployed.png";
 
 const ComparisonSlider = () => {
-  const [sliderPosition, setSliderPosition] = useState(50);
+  const [sliderPosition, setSliderPosition] = useState(70);
 
   const handleSliderChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setSliderPosition(Number(e.target.value));

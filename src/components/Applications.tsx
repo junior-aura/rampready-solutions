@@ -1,5 +1,5 @@
 import { Warehouse, Truck, Package, Building2 } from "lucide-react";
-import heroImage from "@/assets/hero-ramp.jpg";
+import heroImage from "@/assets/Rampa-hero.png";
 
 const Applications = () => {
   const applications = [
