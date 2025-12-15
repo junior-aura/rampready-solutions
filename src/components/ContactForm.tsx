@@ -29,29 +29,20 @@ const handleSubmit = async (e: React.FormEvent) => {
 
   const params = new URLSearchParams();
   params.append('mauticform[formId]', '2');
-  params.append('mauticform[name]', formData.name);
+  params.append('mauticform[f_name]', formData.name);
   params.append('mauticform[company]', formData.company);
   params.append('mauticform[email]', formData.email);
   params.append('mauticform[phone]', formData.phone);
-  params.append('mauticform[message]', formData.message);
+  params.append('mauticform[f_message]', formData.message);
   params.append('mauticform[submit]', '1');
 
   try {
-    const response = await fetch('https://mautic.vaiprojunior.site/form/submit?formId=2', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/x-www-form-urlencoded',
-        'X-Requested-With': 'XMLHttpRequest',
-      },
-      body: params.toString(),
-      mode: 'cors',
-      credentials: 'omit',
-      redirect: 'manual', 
-    });
+    const success = navigator.sendBeacon(
+      'https://mautic.vaiprojunior.site/form/submit?formId=2',
+      params
+    );
 
-    if (response.status === 0 || response.status === 302 || response.ok) {
-      
-      
+    if (success) {
       toast({
         title: "Solicitação Enviada!",
         description: "Recebemos seus dados e entraremos em contato em breve.",
@@ -65,28 +56,17 @@ const handleSubmit = async (e: React.FormEvent) => {
         message: "",
       });
       
-      
-      return;
+    } else {
+      throw new Error('Beacon failed');
     }
 
-    throw new Error(`Status ${response.status}`);
-
   } catch (error) {
-    console.log('⚠️ Redirecionamento bloqueado (comportamento normal do Mautic)');
-    
+    console.error('Erro ao enviar formulário:', error);
     toast({
-      title: "Solicitação Recebida!",
-      description: "Seus dados foram enviados com sucesso.",
+      title: "Erro ao enviar",
+      description: "Tente novamente mais tarde.",
+      variant: "destructive",
     });
-
-    setFormData({
-      name: "",
-      company: "",
-      email: "",
-      phone: "",
-      message: "",
-    });
-    
   } finally {
     setIsSubmitting(false);
   }
