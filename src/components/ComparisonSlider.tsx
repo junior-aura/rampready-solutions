@@ -3,7 +3,7 @@ import rampFolded from "@/assets/ramp-folded.png";
 import rampDeployed from "@/assets/ramp-deployed.png";
 
 const ComparisonSlider = () => {
-  const [sliderPosition, setSliderPosition] = useState(70);
+  const [sliderPosition, setSliderPosition] = useState(45);
 
   const handleSliderChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setSliderPosition(Number(e.target.value));
@@ -28,20 +28,20 @@ const ComparisonSlider = () => {
         {/* Comparison Container */}
         <div className="relative max-w-4xl mx-auto rounded-2xl overflow-hidden shadow-2xl">
           <div className="aspect-[4/3] relative">
-            {/* Deployed Image (Background) */}
+            {/* Folded Image (Background) */}
             <img
-              src={rampDeployed}
+              src={rampFolded}
               alt="RampPro fully deployed"
               className="absolute inset-0 w-full h-full object-cover"
             />
 
-            {/* Folded Image (Foreground with clip) */}
+            {/* Deployed Image (Foreground with clip) */}
             <div
               className="absolute inset-0 overflow-hidden"
               style={{ clipPath: `inset(0 ${100 - sliderPosition}% 0 0)` }}
             >
               <img
-                src={rampFolded}
+                src={rampDeployed}
                 alt="RampPro folded for storage"
                 className="absolute inset-0 w-full h-full object-cover"
               />
@@ -63,10 +63,10 @@ const ComparisonSlider = () => {
 
             {/* Labels */}
             <div className="absolute top-4 left-4 px-3 py-1.5 bg-primary/90 rounded-lg">
-              <span className="text-primary-foreground font-semibold text-sm">Concorrente</span>
+              <span className="text-primary-foreground font-semibold text-sm">Tradicional</span>
             </div>
             <div className="absolute top-4 right-4 px-3 py-1.5 bg-accent/90 rounded-lg">
-              <span className="text-accent-foreground font-semibold text-sm">Auratec</span>
+              <span className="text-accent-foreground font-semibold text-sm">Rampa Ajustável</span>
             </div>
 
             {/* Invisible Range Input for Interaction */}
