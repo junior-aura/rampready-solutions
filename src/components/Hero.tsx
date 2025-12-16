@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Play, ArrowRight, CheckCircle } from "lucide-react";
 import heroImage from "@/assets/Rampa-hero.png";
+import mp2 from "@/assets/video/Rampa-dobravel.mp4";
 
 const Hero = () => {
   const benefits = [
@@ -85,21 +86,31 @@ const Hero = () => {
             </div>
           </div>
 
-          {/* Hero Visual / Video Placeholder */}
-          <div className="relative hidden lg:block animate-fade-up delay-300">
-            <div className="relative aspect-video rounded-2xl overflow-hidden shadow-2xl shadow-black/30">
-              <img
-                src={heroImage}
-                alt="Foldable ramp demonstration"
-                className="w-full h-full object-cover"
-              />
-              {/* Play Button Overlay */}
-              <div className="absolute inset-0 flex items-center justify-center bg-black/30 hover:bg-black/20 transition-colors cursor-pointer group">
-                <div className="w-20 h-20 bg-accent rounded-full flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform">
-                  <Play className="w-8 h-8 text-accent-foreground ml-1" fill="currentColor" />
-                </div>
-              </div>
+          {/* Hero Visual / Video */}
+          <div className="relative">
+          {/* Video Container */}
+            <div className="relative aspect-video rounded-2xl overflow-hidden shadow-2xl border border-border/50">
+                <video
+                  autoPlay
+                  loop
+                  muted
+                  playsInline
+                  className="w-full h-full object-cover"
+                  poster={heroImage}
+                >
+                  <source src={mp2} />
+                  {/* Fallback para navegadores sem suporte */}
+                  <img 
+                    src={heroImage} 
+                    alt="Rampa Dobrável Auratec em ação"
+                    className="w-full h-full object-cover"
+                  />
+                </video>
+
+                {/* Overlay com gradiente (opcional, para melhor contraste com texto) */}
+                <div className="absolute inset-0 bg-gradient-to-t from-background/20 to-transparent pointer-events-none" />
             </div>
+          
 
             {/* Floating Stats Card */}
             <div className="absolute -bottom-6 -left-6 bg-card p-6 rounded-xl shadow-xl animate-float">
@@ -114,12 +125,12 @@ const Hero = () => {
             </div>
           </div>
         </div>
-      </div>
 
-      {/* Scroll Indicator */}
-      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
-        <div className="w-6 h-10 border-2 border-primary-foreground/30 rounded-full flex justify-center pt-2">
-          <div className="w-1.5 h-3 bg-primary-foreground/50 rounded-full" />
+        {/* Scroll Indicator */}
+        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
+          <div className="w-6 h-10 border-2 border-primary-foreground/30 rounded-full flex justify-center pt-2">
+            <div className="w-1.5 h-3 bg-primary-foreground/50 rounded-full" />
+          </div>
         </div>
       </div>
     </section>
