@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Play, ArrowRight, CheckCircle } from "lucide-react";
 import heroImage from "@/assets/Rampa-hero.png";
-import mp2 from "@/assets/video/Rampa-dobravel.mp4";
+import mp2 from "@/assets/video/rampa-dobravel.mp4";
 
 const Hero = () => {
   const benefits = [
