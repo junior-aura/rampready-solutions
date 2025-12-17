@@ -5,8 +5,8 @@ import mp2 from "@/assets/video/rampa-dobravel.mp4";
 
 const Hero = () => {
   const benefits = [
-    "Implanta em menos de 60 segundos", 
-    "Capacidade de carga de 2.268 kg (5.000+ lbs)", 
+    "Implanta em menos de 120 segundos", 
+    "Capacidade de carga de 800kg", 
     "Pegada de armazenamento compacta",
   ];
 
@@ -43,8 +43,8 @@ const Hero = () => {
             </h1>
 
             <p className="text-lg sm:text-xl text-primary-foreground/80 mb-8 max-w-xl animate-fade-up delay-200">
-              Economize espaço e tempo com a RampPro. Nossa rampa industrial se dobra
-              em um piscar de olhos, oferecendo durabilidade e capacidade de carga
+              Economize espaço e tempo com a Rampa Ajustável. Dobra num
+              piscar de olhos, oferecendo durabilidade e capacidade de carga
               superior sem o volume das rampas tradicionais.
             </p>
 
@@ -62,7 +62,7 @@ const Hero = () => {
             <div className="flex flex-col sm:flex-row gap-4 animate-fade-up delay-400">
               <Button variant="hero" size="xl" asChild>
                 <a href="#contact">
-                  Solicitar melhor orçamento
+                  Melhor orçamento com frete
                   <ArrowRight className="w-5 h-5 ml-2" />
                 </a>
               </Button>
@@ -114,13 +114,13 @@ const Hero = () => {
 
             {/* Floating Stats Card */}
             <div className="absolute -bottom-6 -left-6 bg-card p-6 rounded-xl shadow-xl animate-float">
-              <div className="text-3xl font-display font-bold text-foreground">1.000+</div>
-              <div className="text-sm text-muted-foreground">kg capacidade</div>
+              <div className="text-3xl font-display font-bold text-foreground">800 kg</div>
+              <div className="text-sm text-muted-foreground">de capacidade</div>
             </div>
 
             {/* Floating Feature Card */}
             <div className="absolute -top-4 -right-4 bg-accent p-4 rounded-xl shadow-xl animate-float delay-200">
-              <div className="text-2xl font-display font-bold text-accent-foreground">180s</div>
+              <div className="text-2xl font-display font-bold text-accent-foreground">2 minutos</div>
               <div className="text-sm text-accent-foreground/80">Tempo de posicionamento</div>
             </div>
           </div>

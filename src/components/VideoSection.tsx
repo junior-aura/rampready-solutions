@@ -1,13 +1,16 @@
-import { useState, useRef } from "react";
+import { useState, useRef, useEffect } from "react";
 import { Play, Pause, Volume2, VolumeX, Maximize } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import heroImage from "@/assets/hero-ramp.jpg";
 import mp1 from "@/assets/video/Rampa-ajustavel.mp4";
+import mp2 from "@/assets/video/rampa-dobravel.mp4";
+import mp3 from "@/assets/video/usage.mp4";
 
 const VideoSection = () => {
   const [isPlaying, setIsPlaying] = useState(false);
   const [isMuted, setIsMuted] = useState(true);
   const [currentVideoIndex, setCurrentVideoIndex] = useState(0);
+  const [isLoading, setIsLoading] = useState(false);
   const videoRef = useRef<HTMLVideoElement>(null);
 
   const videoList = [
@@ -22,17 +25,45 @@ const VideoSection = () => {
       title: "Guia de Aplicação Rápido",
       description: "Montagem e desmontagem em menos de 3 minutos",
       duration: "1:45",
-      src: mp1,
+      src: mp2,
       poster: heroImage,
     },
     {
       title: "Teste de Carga",
       description: "Capacidade máxima de 2.268 kg em operação",
       duration: "3:12",
-      src: mp1,
+      src: mp3,
       poster: heroImage,
     },
   ];
+
+  // Efeito para carregar novo vídeo quando o índice muda
+  useEffect(() => {
+    if (videoRef.current) {
+      const video = videoRef.current;
+      
+      const handleLoadStart = () => setIsLoading(true);
+      const handleCanPlay = () => setIsLoading(false);
+      
+      video.addEventListener('loadstart', handleLoadStart);
+      video.addEventListener('canplay', handleCanPlay);
+      
+      // Forçar recarregamento do vídeo
+      video.load();
+      
+      if (isPlaying) {
+        video.play().catch(e => {
+          console.log("Autoplay prevented:", e);
+          setIsPlaying(false);
+        });
+      }
+      
+      return () => {
+        video.removeEventListener('loadstart', handleLoadStart);
+        video.removeEventListener('canplay', handleCanPlay);
+      };
+    }
+  }, [currentVideoIndex]); // Executa quando currentVideoIndex muda
 
   const togglePlayPause = () => {
     if (videoRef.current) {
@@ -57,15 +88,14 @@ const VideoSection = () => {
   };
 
   const switchVideo = (index: number) => {
-    setCurrentVideoIndex(index);
-    setIsPlaying(true);
-    
-    // Timeout para garantir que o DOM atualize antes de tocar
-    setTimeout(() => {
-      if (videoRef.current) {
-        videoRef.current.play().catch(e => console.log("Autoplay prevented:", e));
-      }
-    }, 100);
+    if (index === currentVideoIndex) {
+      // Se clicar no vídeo atual, apenas toca/pausa
+      togglePlayPause();
+    } else {
+      // Troca para novo vídeo
+      setCurrentVideoIndex(index);
+      setIsPlaying(true);
+    }
   };
 
   const enterFullscreen = () => {
@@ -99,14 +129,23 @@ const VideoSection = () => {
 
         {/* Main Video Player */}
         <div className="relative aspect-video max-w-5xl mx-auto rounded-2xl overflow-hidden shadow-2xl mb-8 group">
+          {/* Loading Indicator */}
+          {isLoading && (
+            <div className="absolute inset-0 bg-black/80 flex items-center justify-center z-20">
+              <div className="text-white text-lg">Carregando vídeo...</div>
+            </div>
+          )}
+          
+          {/* Vídeo com key única para forçar recriação */}
           <video
+            key={`video-${currentVideoIndex}`} // 🔥 KEY CRÍTICA - força recriação
             ref={videoRef}
             className="w-full h-full object-cover"
-            poster={heroImage}
             onClick={handleVideoClick}
             onEnded={handleVideoEnd}
             preload="metadata"
             playsInline
+            muted={isMuted}
           >
             <source src={videoList[currentVideoIndex].src} type="video/mp4" />
             Seu navegador não suporta vídeos HTML5.
@@ -216,7 +255,7 @@ const VideoSection = () => {
               }`}
               aria-label={`Assistir ${video.title}`}
             >
-              {/* Video Thumbnail */}
+              {/* Video Thumbnail - Usando vídeo real como thumbnail */}
               <div className="w-full h-full bg-gradient-to-br from-gray-900 to-gray-700">
                 <video
                   className="w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-opacity"
