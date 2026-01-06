@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -6,6 +7,7 @@ import { useToast } from "@/hooks/use-toast";
 import { Send, Phone, Mail, MapPin } from "lucide-react";
 
 const ContactForm = () => {
+  const navigate = useNavigate();
   const { toast } = useToast();
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [formData, setFormData] = useState({
@@ -35,13 +37,11 @@ const ContactForm = () => {
       description: "Our team will contact you within 24 hours.",
     });
 
-    setFormData({
-      name: "",
-      company: "",
-      email: "",
-      phone: "",
-      message: "",
-    });
+    // Redirect to thank-you page after brief delay for toast visibility
+    setTimeout(() => {
+      navigate("/thank-you");
+    }, 500);
+
     setIsSubmitting(false);
   };
 
